@@ -1,8 +1,8 @@
 ---
 title: 我的小伙伴们
 keywords: 链接
-description: 云游的小伙伴们
-links: https://www.yunyoujun.cn/friends/links.json
+description: 小林的小伙伴们
+links: http://cdn.jsdelivr.net/gh/djzzlim/djzzlim.github.io/links.json
 random: true
 ---
 
