@@ -8,7 +8,10 @@ export default defineSiteConfig({
   subtitle: '~~~~~~~~~~~~~~~~',
   author: {
     name: '小林',
-    avatar: 'https://avatars.githubusercontent.com/u/57754036?s=400&u=1b0ea34ae64633021445d42ccc30cc4c534fdc0a&v=4'
+    avatar: 'https://avatars.githubusercontent.com/u/57754036?s=400&u=1b0ea34ae64633021445d42ccc30cc4c534fdc0a&v=4',
+    status: {
+      emoji: '✨'	// 头像旁边的emoji
+    },
   },
   description: '寒尽觉春生',
   social: [
