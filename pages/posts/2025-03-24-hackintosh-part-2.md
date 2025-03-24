@@ -11,6 +11,7 @@ tags:
 top: 3
 ---
 
+::: zh-CN
 ## 前言
 
 在经历了一系列尝试与调整后，我终于成功地在我的HP EliteDesk 800 G2 Mini上安装了macOS系统。这篇文章主要记录我的安装过程、遇到的问题以及解决方案，希望能对有类似硬件配置的朋友提供一些参考。
@@ -169,3 +170,165 @@ OC小工具文件夹，包含了一些实用工具如CleanNvram.efi和ResetSyste
 然而，OpenCore的**config.plist**配置才是决定黑苹果能否正常引导的关键。错误的config.plist可能会导致卡在苹果logo、无法识别硬件，甚至直接黑屏。  
 
 在**下一篇文章**，我将详细讲解如何正确配置**config.plist**，让你的Hackintosh更加稳定，避免常见问题。敬请期待！
+:::
+
+::: en
+## Introduction
+
+After a series of attempts and adjustments, I finally succeeded in installing macOS on my HP EliteDesk 800 G2 Mini. This article mainly documents my installation process, the problems I encountered, and the solutions I found, hoping to provide some reference for friends with similar hardware configurations.
+
+## Hardware Configuration
+
+My computer is an HP EliteDesk 800 G2 Mini, with the following specifications:
+
+| Hardware | Model |
+|----------|-------|
+| CPU | Intel Core i5-6600T (Skylake) |
+| Motherboard | HP EliteDesk 800 G2 Mini integrated motherboard |
+| Graphics | Intel HD Graphics 530 (integrated) |
+| Memory | 12GB DDR4 |
+| Storage | 500GB HDD |
+| Network Card | None |
+
+## Installation Preparation
+
+### Essential Tools
+
+- USB drive with 16GB or more capacity (for creating installation media)
+- Stable internet connection
+- Backup of important data (installation process may involve partition operations)
+
+### BIOS Settings
+
+I first updated the BIOS to the latest version (2023 release), which is highly recommended as it provides better compatibility and stability.
+
+Here are the detailed BIOS settings I used on the HP EliteDesk 800 G2 Mini:
+
+**Security-related settings:**
+- **TPM Embedded Security** - Set to hidden
+- **Intel Software Guard Extension (SGX)** - Disabled
+- **Secure boot configuration** - Set to Legacy Support Enable and Secure Boot Disable
+
+**Boot Options:**
+- **USB Storage boot** - Enabled (to ensure booting from USB drive)
+- **PXE boot** - Disabled
+- **Fast boot** - Disabled
+- **CD-ROM boot** - Disabled
+- Boot sequence set according to personal needs
+
+**System Options:**
+- **Turbo-boost** - Enabled
+- **Multi-processor** - Enabled
+- **VT (VTx)** - Enabled
+- **M.2 SSD** - Enabled
+- **Allow PCIe/PCI SERR# Interrupt** - Enabled
+- Virtualization options kept enabled, these settings are safe and stable
+
+**Built-in Device Options:**
+- **Embedded LAN controller** - Enabled
+- **Audio device** - Enabled
+- **Internal speakers** - Enabled
+- **Video memory size** - Increased to 512MB (this is very important for Hackintosh)
+
+**Port Options:**
+- All port options fully enabled
+
+**Optional ROM Policy:**
+- All set to Legacy
+
+**Power Management Options:**
+- All enabled except for "unique sleep state blink rates"
+
+**Remote Management Options:**
+- All options disabled
+
+> Note: If you cannot find certain options, it may be due to differences in BIOS interfaces across different motherboards. More detailed BIOS settings can be found in guides for specific motherboards on [tonymacx86.com](https://tonymacx86.com).
+
+## OpenCore Boot Preparation
+
+First, we need to download the OpenCore boot package. You can get the latest version from the official GitHub repository: [https://github.com/acidanthera/OpenCorePkg/releases](https://github.com/acidanthera/OpenCorePkg/releases)
+
+After downloading, we'll find that OpenCore contains the following main components:
+
+### OpenCore Package Structure
+
+- **Docs**: Contains OC's latest configuration documents, version update changes, ACPI sample files, and Sample.list configuration file templates
+- **IA32**: Contains EFI boot files for 32-bit older machines
+- **Utilities**: OC official integrated tools are stored here
+- **X64**: Contains EFI boot files for 64-bit current mainstream machines
+
+OpenCore provides 2 configuration file templates, Sample.plist and SampleCustom.plist. We typically use Sample.plist as our configuration file.
+
+### EFI Folder Structure
+
+The EFI part is the main focus of OpenCore. Here are the main EFI folder functions:
+
+##### BOOT Folder
+BOOT folder containing BOOTx64.efi boot file.
+
+##### OC/ACPI Folder
+Stores compiled SSDT files, all in .aml format. These files are used to fix and improve ACPI tables, ensuring hardware works properly.
+
+##### OC/Drivers Folder
+This contains driver files, all ending with the .efi extension. OC officially provides multiple driver files by default.
+
+##### OC/Kexts Folder
+This contains Kexts kernel extension files, all in .kext format. These files are key to making Hackintosh work properly, used to drive various hardware devices.
+
+##### Resources Folder
+This contains OC's third-party theme files. I personally always use the official theme, which is simple and elegant.
+
+##### Tools Folder
+OC tools folder, including useful utilities such as CleanNvram.efi and ResetSystem.efi.
+
+## Configuring OpenCore (for HP EliteDesk 800 G2 Mini)
+
+For my HP EliteDesk 800 G2 Mini with Intel Core i5-6600T processor, I need the following key Kexts:
+
+1. **Basic/Core Kexts**
+   - [**Lilu.kext**](https://github.com/acidanthera/lilu/releases) - Core patching engine, a prerequisite for many other Kexts
+   - [**VirtualSMC.kext**](https://github.com/acidanthera/virtualsmc/releases) - Simulates Apple SMC chip, essential for Hackintosh
+
+2. **Graphics Related**
+   - [**WhateverGreen.kext**](https://github.com/acidanthera/whatevergreen/releases) - For Intel HD Graphics 530 driver and fixes
+
+3. **Audio and Network**
+   - [**AppleALC.kext**](https://github.com/acidanthera/applealc/releases) - For audio driver and layout recognition
+   - [**IntelMausi.kext**](https://github.com/acidanthera/intelmausi/releases) - For Intel Ethernet controller driver
+
+4. **USB and Power Management**
+   - [**USBInjectAll.kext**](https://github.com/Sniki/OS-X-USB-Inject-All/releases) - For USB port injection
+   - [**CPUTscSync.kext**](https://github.com/acidanthera/CpuTscSync/releases) - For multi-core CPU clock synchronization
+   - [**HibernationFixup.kext**](https://github.com/acidanthera/HibernationFixup/releases) - Fixes hibernation issues
+
+5. **Other Functional Kexts**
+   - [**NVMeFix.kext**](https://github.com/acidanthera/NVMeFix/releases) - For improved NVMe driver support
+   - [**RTCMemoryFixup.kext**](https://github.com/acidanthera/RTCMemoryFixup/releases) - Fixes RTC memory issues
+   - [**SMCProcessor.kext**](https://github.com/acidanthera/virtualsmc/releases) - VirtualSMC plugin, provides CPU temperature monitoring
+   - [**SMCSuperIO.kext**](https://github.com/acidanthera/virtualsmc/releases) - VirtualSMC plugin, provides fan monitoring
+
+### ACPI File Configuration
+
+For the Skylake platform, I need the following SSDT files:
+
+1. [**SSDT-PLUG-DRTNIA.aml**](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PLUG-DRTNIA.aml) - For CPU power management
+2. [**SSDT-EC-USBX-DESKTOP.aml**](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-USBX-DESKTOP.aml) - Fixes embedded controller
+
+## OpenCore Configuration Tools
+
+If you are using Windows/Mac systems to prepare the EFI partition, I recommend:
+
+- [**OCAuxiliaryTools (OCATs)**](https://github.com/ic005k/OCAuxiliaryTools/releases)
+  - A more modern alternative to ProperTree
+  - Provides a graphical interface for editing config.plist
+
+> Kexts (kernel extensions) have loading order requirements, and some Kexts may conflict with each other, causing the system to fail to boot.
+
+## Conclusion
+
+So far, we have completed the basic setup for the HP EliteDesk 800 G2 Mini, including BIOS adjustments, OpenCore boot preparation, and essential Kexts and ACPI files. This way, our Hackintosh system basically has the conditions to boot.
+
+However, the **config.plist** configuration in OpenCore is the key to determining whether the Hackintosh can boot normally. Incorrect config.plist may cause it to get stuck at the Apple logo, fail to recognize hardware, or even result in a black screen.
+
+In the **next article**, I will explain in detail how to correctly configure the **config.plist** to make your Hackintosh more stable and avoid common problems. Stay tuned!
+:::
