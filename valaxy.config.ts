@@ -22,6 +22,11 @@ export default defineValaxyConfig<UserThemeConfig>({
 
     pages: [
       {
+        name: '项目橱窗',
+        url: '/projects/',
+        icon: 'i-ri-code-s-slash-line',
+      },
+      {
         name: '我的小伙伴们',
         url: '/links/',
         icon: 'i-ri-open-arm-line',
