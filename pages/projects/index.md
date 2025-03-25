@@ -13,6 +13,11 @@ projects:
     title: 应用 | Applications
     emoji: 📱
     collection:
+      - name: Stu.dying
+        emoji: 🎯
+        desc: A study tool with to-do lists, Pomodoro timers, and rankings to boost focus and productivity! 🚀
+        color: '#6A5ACD'
+        github: djzzlim/stu.dying
       - name: Monthly Fee Management System
         emoji: 📊
         desc: A simple system for managing and tracking monthly fees.
@@ -48,11 +53,6 @@ projects:
     title: 实验 | Experiments
     emoji: 🧪
     collection:
-      - name: Stu.dying
-        emoji: 🎯
-        desc: A study tool with to-do lists, Pomodoro timers, and rankings to boost focus and productivity! 🚀
-        color: '#6A5ACD'
-        github: djzzlim/stu.dying
       - name: Assembly Language Interpreter
         emoji: 🖥️
         desc: A simple VM that processes ASM files, supports 7 registers, 4 flags, and 64 memory locations.
