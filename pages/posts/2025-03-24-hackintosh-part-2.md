@@ -12,11 +12,11 @@ top: 3
 ---
 
 ::: zh-CN
-## 前言
+## 前言 {lang="zh-CN"}
 
 在经历了一系列尝试与调整后，我终于成功地在我的HP EliteDesk 800 G2 Mini上安装了macOS系统。这篇文章主要记录我的安装过程、遇到的问题以及解决方案，希望能对有类似硬件配置的朋友提供一些参考。
 
-## 硬件配置
+## 硬件配置 {lang="zh-CN"}
 
 我的电脑是HP EliteDesk 800 G2 Mini，具体配置如下：
 
@@ -29,15 +29,15 @@ top: 3
 | 硬盘 | 500GB HDD |
 | 网卡 | 无网卡 |
 
-## 安装准备
+## 安装准备 {lang="zh-CN"}
 
-### 必备工具
+### 必备工具 {lang="zh-CN"}
 
 - 16GB以上U盘（用于制作安装介质）
 - 稳定的互联网连接
 - 备份重要数据（安装过程可能会涉及分区操作）
 
-### BIOS设置
+### BIOS设置 {lang="zh-CN"}
 
 我首先将BIOS更新到最新版本(2023年版)，这是非常推荐的步骤，因为它提供了更好的兼容性和稳定性。
 
@@ -83,13 +83,13 @@ top: 3
 
 > 注：如果找不到某些选项，可能是因为不同主板的BIOS界面差异。更详细的BIOS设置可以参考[tonymacx86.com](https://tonymacx86.com)上针对特定主板的指南。
 
-## OpenCore引导准备
+## OpenCore引导准备 {lang="zh-CN"}
 
 首先，我们需要下载OpenCore引导包。可以从官方GitHub仓库获取最新版本：[https://github.com/acidanthera/OpenCorePkg/releases](https://github.com/acidanthera/OpenCorePkg/releases)
 
 下载后，我们会发现OpenCore包含以下几个主要部分：
 
-### OpenCore包结构
+### OpenCore包结构 {lang="zh-CN"}
 
 - **Docs**：存放OC最新的配置文档、版本更新变化、ACPI示例文件以及Sample.list配置文件模板
 - **IA32**：里面放着32位老机器使用的EFI引导文件
@@ -98,29 +98,29 @@ top: 3
 
 OpenCore提供了2个配置文件模板，分别是Sample.plist和SampleCustom.plist，通常我们使用Sample.plist这个配置文件。
 
-### EFI文件夹结构
+### EFI文件夹结构 {lang="zh-CN"}
 
 EFI部分是OpenCore的重头戏，下面是EFI主要文件夹的作用：
 
-##### BOOT文件夹
+##### BOOT文件夹 {lang="zh-CN"}
 BOOT引导文件夹，包含BOOTx64.efi引导文件。
 
-##### OC/ACPI文件夹
+##### OC/ACPI文件夹 {lang="zh-CN"}
 存放SSDT编译好的文件，格式均为.aml格式。这些文件用于修复和完善ACPI表，确保硬件能够正常工作。
 
-##### OC/Drivers文件夹
+##### OC/Drivers文件夹 {lang="zh-CN"}
 这里放着一些驱动文件，这些驱动均以.efi后缀结尾，OC官方默认提供了多个驱动文件。
 
-##### OC/Kexts文件夹
+##### OC/Kexts文件夹 {lang="zh-CN"}
 这里放着Kexts内核扩展文件，格式均为.kext文件。这些文件是黑苹果能够正常工作的关键，用于驱动各种硬件设备。
 
-##### Resources文件夹
+##### Resources文件夹 {lang="zh-CN"}
 这里放着OC的第三方主题文件，我个人一直使用官方主题，简约美观。
 
-##### Tools文件夹
+##### Tools文件夹 {lang="zh-CN"}
 OC小工具文件夹，包含了一些实用工具如CleanNvram.efi和ResetSystem.efi等。
 
-## 配置OpenCore（针对HP EliteDesk 800 G2 Mini）
+## 配置OpenCore（针对HP EliteDesk 800 G2 Mini {lang="zh-CN"}
 
 对于我的HP EliteDesk 800 G2 Mini与Intel Core i5-6600T处理器，我需要以下关键Kext：
 
@@ -146,14 +146,14 @@ OC小工具文件夹，包含了一些实用工具如CleanNvram.efi和ResetSyste
    - [**SMCProcessor.kext**](https://github.com/acidanthera/virtualsmc/releases) - VirtualSMC插件，提供CPU温度监控
    - [**SMCSuperIO.kext**](https://github.com/acidanthera/virtualsmc/releases) - VirtualSMC插件，提供风扇监控
 
-### ACPI文件配置
+### ACPI文件配置 {lang="zh-CN"}
 
 对于Skylake平台，我需要以下SSDT文件：
 
 1. [**SSDT-PLUG-DRTNIA.aml**](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PLUG-DRTNIA.aml) - 用于CPU电源管理
 2. [**SSDT-EC-USBX-DESKTOP.aml**](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-USBX-DESKTOP.aml) - 修复嵌入式控制器
 
-## OpenCore配置工具
+## OpenCore配置工具 {lang="zh-CN"}
 
 如果您使用Windows/Mac系统准备EFI分区，推荐使用：
 
@@ -163,7 +163,7 @@ OC小工具文件夹，包含了一些实用工具如CleanNvram.efi和ResetSyste
 
 > Kexts（内核扩展）是有加载顺序要求的，并且有些 Kexts 之间可能会发生冲突，导致系统无法启动。
 
-## 尾声  
+## 尾声 {lang="zh-CN"}
 
 到目前为止，我们已经完成了HP EliteDesk 800 G2 Mini的基础设置，包括BIOS调整、OpenCore引导准备以及必备的Kexts和ACPI文件。这样，我们的黑苹果系统已经基本具备了启动的条件。  
 
@@ -173,11 +173,11 @@ OC小工具文件夹，包含了一些实用工具如CleanNvram.efi和ResetSyste
 :::
 
 ::: en
-## Introduction
+## Introduction {lang="en"}
 
 After a series of attempts and adjustments, I finally succeeded in installing macOS on my HP EliteDesk 800 G2 Mini. This article mainly documents my installation process, the problems I encountered, and the solutions I found, hoping to provide some reference for friends with similar hardware configurations.
 
-## Hardware Configuration
+## Hardware Configuration {lang="en"}
 
 My computer is an HP EliteDesk 800 G2 Mini, with the following specifications:
 
@@ -190,15 +190,15 @@ My computer is an HP EliteDesk 800 G2 Mini, with the following specifications:
 | Storage | 500GB HDD |
 | Network Card | None |
 
-## Installation Preparation
+## Installation Preparation {lang="en"}
 
-### Essential Tools
+### Essential Tools {lang="en"}
 
 - USB drive with 16GB or more capacity (for creating installation media)
 - Stable internet connection
 - Backup of important data (installation process may involve partition operations)
 
-### BIOS Settings
+### BIOS Settings {lang="en"}
 
 I first updated the BIOS to the latest version (2023 release), which is highly recommended as it provides better compatibility and stability.
 
@@ -244,13 +244,13 @@ Here are the detailed BIOS settings I used on the HP EliteDesk 800 G2 Mini:
 
 > Note: If you cannot find certain options, it may be due to differences in BIOS interfaces across different motherboards. More detailed BIOS settings can be found in guides for specific motherboards on [tonymacx86.com](https://tonymacx86.com).
 
-## OpenCore Boot Preparation
+## OpenCore Boot Preparation {lang="en"}
 
 First, we need to download the OpenCore boot package. You can get the latest version from the official GitHub repository: [https://github.com/acidanthera/OpenCorePkg/releases](https://github.com/acidanthera/OpenCorePkg/releases)
 
 After downloading, we'll find that OpenCore contains the following main components:
 
-### OpenCore Package Structure
+### OpenCore Package Structure {lang="en"}
 
 - **Docs**: Contains OC's latest configuration documents, version update changes, ACPI sample files, and Sample.list configuration file templates
 - **IA32**: Contains EFI boot files for 32-bit older machines
@@ -259,29 +259,29 @@ After downloading, we'll find that OpenCore contains the following main componen
 
 OpenCore provides 2 configuration file templates, Sample.plist and SampleCustom.plist. We typically use Sample.plist as our configuration file.
 
-### EFI Folder Structure
+### EFI Folder Structure {lang="en"}
 
 The EFI part is the main focus of OpenCore. Here are the main EFI folder functions:
 
-##### BOOT Folder
+##### BOOT Folder {lang="en"}
 BOOT folder containing BOOTx64.efi boot file.
 
-##### OC/ACPI Folder
+##### OC/ACPI Folder {lang="en"}
 Stores compiled SSDT files, all in .aml format. These files are used to fix and improve ACPI tables, ensuring hardware works properly.
 
-##### OC/Drivers Folder
+##### OC/Drivers Folder {lang="en"}
 This contains driver files, all ending with the .efi extension. OC officially provides multiple driver files by default.
 
-##### OC/Kexts Folder
+##### OC/Kexts Folder {lang="en"}
 This contains Kexts kernel extension files, all in .kext format. These files are key to making Hackintosh work properly, used to drive various hardware devices.
 
-##### Resources Folder
+##### Resources Folder {lang="en"}
 This contains OC's third-party theme files. I personally always use the official theme, which is simple and elegant.
 
-##### Tools Folder
+##### Tools Folder {lang="en"}
 OC tools folder, including useful utilities such as CleanNvram.efi and ResetSystem.efi.
 
-## Configuring OpenCore (for HP EliteDesk 800 G2 Mini)
+## Configuring OpenCore (for HP EliteDesk 800 G2 Mini) {lang="en"}
 
 For my HP EliteDesk 800 G2 Mini with Intel Core i5-6600T processor, I need the following key Kexts:
 
@@ -307,14 +307,14 @@ For my HP EliteDesk 800 G2 Mini with Intel Core i5-6600T processor, I need the f
    - [**SMCProcessor.kext**](https://github.com/acidanthera/virtualsmc/releases) - VirtualSMC plugin, provides CPU temperature monitoring
    - [**SMCSuperIO.kext**](https://github.com/acidanthera/virtualsmc/releases) - VirtualSMC plugin, provides fan monitoring
 
-### ACPI File Configuration
+### ACPI File Configuration {lang="en"}
 
 For the Skylake platform, I need the following SSDT files:
 
 1. [**SSDT-PLUG-DRTNIA.aml**](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PLUG-DRTNIA.aml) - For CPU power management
 2. [**SSDT-EC-USBX-DESKTOP.aml**](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-USBX-DESKTOP.aml) - Fixes embedded controller
 
-## OpenCore Configuration Tools
+## OpenCore Configuration Tools {lang="en"}
 
 If you are using Windows/Mac systems to prepare the EFI partition, I recommend:
 
@@ -324,7 +324,7 @@ If you are using Windows/Mac systems to prepare the EFI partition, I recommend:
 
 > Kexts (kernel extensions) have loading order requirements, and some Kexts may conflict with each other, causing the system to fail to boot.
 
-## Conclusion
+## Conclusion {lang="en"}
 
 So far, we have completed the basic setup for the HP EliteDesk 800 G2 Mini, including BIOS adjustments, OpenCore boot preparation, and essential Kexts and ACPI files. This way, our Hackintosh system basically has the conditions to boot.
 

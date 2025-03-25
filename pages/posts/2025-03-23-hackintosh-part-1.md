@@ -26,7 +26,7 @@ top: 2
 
 ---
 
-### 什么是黑苹果？
+### 什么是黑苹果？{lang="zh-CN"}
 
 **黑苹果（Hackintosh）**，简单来说就是让 macOS 运行在非苹果硬件上。通过修改 EFI 引导、配置内核补丁等方式，可以让 PC 电脑成功运行 macOS，并且在某些情况下，黑苹果的性能甚至可以超过某些官方 Mac 设备。
 
@@ -38,7 +38,7 @@ top: 2
 
 ---
 
-### 黑苹果 vs. Linux
+### 黑苹果 vs. Linux {lang="zh-CN"}
 
 有人可能会想：
 
@@ -55,7 +55,7 @@ top: 2
 
 ---
 
-### 黑苹果的安装流程概述
+### 黑苹果的安装流程概述 {lang="zh-CN"}
 
 黑苹果的安装不是一键搞定的，需要一定的技术门槛。大致流程如下：
 
@@ -84,7 +84,7 @@ top: 2
 
 ---
 
-### 黑苹果的优缺点
+### 黑苹果的优缺点 {lang="zh-CN"}
 
 | 优点 | 缺点 |
 |------|------|
@@ -94,7 +94,7 @@ top: 2
 
 ---
 
-### 结语
+### 结语 {lang="zh-CN"}
 
 黑苹果是一个有趣且实用的方案，特别是对于想开发 iOS App 但买不起 Mac 的开发者来说，是一个不错的选择。当然，安装黑苹果并不简单，需要不断调整和优化，但当你看到 macOS 在自己的 PC 上流畅运行时，那种成就感是无与伦比的！
 
@@ -102,7 +102,7 @@ top: 2
 :::
 
 ::: en
-As a child watching Apple keynotes, I always thought Mac computers were smooth and advanced. Comparing them to my clunky Windows device, I couldn't help feeling envious. Plus, if you want to develop iOS apps, you need Xcode, which only runs on macOS. But when you open Apple's website and look at Mac prices:
+As a kid watching Apple keynotes, I always thought Mac computers were smooth and advanced. Comparing them to my clunky Windows device, I couldn't help feeling envious. Plus, if you want to develop iOS apps, you need Xcode, which only runs on macOS. But when you open Apple's website and look at Mac prices:
 
 > "Hundreds, thousands..."
 > "Too expensive!"
@@ -117,7 +117,7 @@ This is where **Hackintosh** comes into play.
 
 ---
 
-### What is a Hackintosh?
+### What is a Hackintosh? {lang="en"}
 
 A **Hackintosh** is simply running macOS on non-Apple hardware. By modifying the EFI boot system and configuring kernel patches, you can get a PC to successfully run macOS. In some cases, a Hackintosh can even outperform certain official Mac devices.
 
@@ -129,7 +129,7 @@ The answer is: virtual machines can't provide a complete macOS experience, espec
 
 ---
 
-### Hackintosh vs. Linux
+### Hackintosh vs. Linux {lang="en"}
 
 Some might wonder:
 
@@ -146,7 +146,7 @@ So, if you're a developer, designer, or video editor, macOS might be unavoidable
 
 ---
 
-### Hackintosh Installation Process Overview
+### Hackintosh Installation Process Overview {lang="en"}
 
 Installing a Hackintosh isn't a one-click solution; it requires some technical knowledge. The general process is:
 
@@ -175,7 +175,7 @@ Installing a Hackintosh isn't a one-click solution; it requires some technical k
 
 ---
 
-### Pros and Cons of Hackintosh
+### Pros and Cons of Hackintosh {lang="en"}
 
 | Pros | Cons |
 |------|------|
@@ -185,7 +185,7 @@ Installing a Hackintosh isn't a one-click solution; it requires some technical k
 
 ---
 
-### Conclusion
+### Conclusion {lang="en"}
 
 Hackintosh is an interesting and practical solution, especially for developers who want to develop iOS apps but can't afford a Mac. Of course, installing a Hackintosh isn't simple and requires constant adjustment and optimization, but when you see macOS running smoothly on your PC, that sense of achievement is incomparable!
 
