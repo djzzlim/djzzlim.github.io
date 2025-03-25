@@ -1,5 +1,6 @@
 ---
-title: 为什么我选择 Valaxy 作为我的静态博客框架
+title: Why I Chose Valaxy as My Static Blog Framework
+title_zh: 为什么我选择 Valaxy 作为我的静态博客框架
 date: 2025-03-23
 updated: 2025-03-23
 categories: Valaxy 笔记

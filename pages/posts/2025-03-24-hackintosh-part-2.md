@@ -1,5 +1,6 @@
 ---
-title: 如何在电脑上运行 macOS？—— 黑苹果指南 Part 2
+title: How to Run macOS on a PC? – Hackintosh Guide Part 2
+title_zh: 如何在电脑上运行 macOS？—— 黑苹果指南 Part 2
 date: 2025-03-24
 updated: 2025-03-24
 categories: 技术教程
