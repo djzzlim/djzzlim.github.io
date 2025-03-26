@@ -10,7 +10,6 @@ tags:
   - Hackintosh
   - 开发环境
   - iOS开发
-top: 2
 ---
 
 ::: zh-CN

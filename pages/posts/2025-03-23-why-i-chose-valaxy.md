@@ -9,7 +9,6 @@ tags:
   - portfolio
   - github-pages
   - static-site
-top: 1
 ---
 
 ::: zh-CN

@@ -9,7 +9,6 @@ tags:
   - macOS
   - Hackintosh
   - 开发环境
-top: 3
 ---
 
 ::: zh-CN
