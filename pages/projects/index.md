@@ -23,6 +23,11 @@ projects:
         desc: A simple system for managing and tracking monthly fees.
         color: '#4A90E2'
         github: djzzlim/Monthly-Fee-Management-System
+      - name: Secure Bank Transfer System
+        emoji: 🏦
+        desc: Multi-tier banking system with advanced security features including TDE, RLS, DDM, and encrypted data protection.
+        color: '#2E8B57'
+        github: djzzlim/CCS6344-T2510
 
   tools:
     title: 工具 | Tools
