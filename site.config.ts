@@ -44,4 +44,5 @@ export default defineSiteConfig({
   search: {
     enable: false,
   },
+
 })
