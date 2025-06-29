@@ -73,6 +73,11 @@ projects:
         desc: Hackintosh setup for EliteDesk 800 G2, turning an HP machine into a macOS system.
         color: '#7D7D7D'
         github: djzzlim/hp-elitedesk-800-g2-hackintosh
+      - name: Blockchain Demo Application
+        emoji: ⛓️
+        desc: A peer-to-peer blockchain application simulating cryptocurrency transactions with JavaFX GUI and local SQLite storage.
+        color: '#1E90FF'
+        github: djzzlim/blockchain-demo
       
   open_source:
     title: 参与 | Contributions
