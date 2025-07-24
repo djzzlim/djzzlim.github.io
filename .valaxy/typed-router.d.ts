@@ -33,6 +33,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/2025-03-24-hackintosh-part-2': RouteRecordInfo<'/posts/2025-03-24-hackintosh-part-2', '/posts/2025-03-24-hackintosh-part-2', Record<never, never>, Record<never, never>>,
     '/posts/2025-03-26-cybersecurity-learning-journey': RouteRecordInfo<'/posts/2025-03-26-cybersecurity-learning-journey', '/posts/2025-03-26-cybersecurity-learning-journey', Record<never, never>, Record<never, never>>,
     '/posts/2025-03-28-hackintosh-part-3': RouteRecordInfo<'/posts/2025-03-28-hackintosh-part-3', '/posts/2025-03-28-hackintosh-part-3', Record<never, never>, Record<never, never>>,
+    '/posts/2025-07-24-homelab': RouteRecordInfo<'/posts/2025-07-24-homelab', '/posts/2025-07-24-homelab', Record<never, never>, Record<never, never>>,
     '/projects/': RouteRecordInfo<'/projects/', '/projects', Record<never, never>, Record<never, never>>,
     '/tags/': RouteRecordInfo<'/tags/', '/tags', Record<never, never>, Record<never, never>>,
   }
