@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://djzzlim.github.io/</id>
+    <title>djzzlim's blog~</title>
+    <updated>2025-11-09T06:20:53.467Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <author>
+        <name>小林</name>
+        <email>i@valaxy.site</email>
+        <uri>https://valaxy.site</uri>
+    </author>
+    <link rel="alternate" href="https://djzzlim.github.io/"/>
+    <link rel="self" href="https://djzzlim.github.io/atom.xml"/>
+    <subtitle>所以一直在记录</subtitle>
+    <logo>https://avatars.githubusercontent.com/u/57754036?s=400&amp;u=1b0ea34ae64633021445d42ccc30cc4c534fdc0a&amp;v=4</logo>
+    <icon>https://djzzlim.github.io/favicon.svg</icon>
+    <rights>CC BY-NC-SA 4.0 2025 © 小林</rights>
+    <entry>
+        <title type="html"><![CDATA[Building a Modern Homelab with Free Domain and Cloudflare Zero Trust]]></title>
+        <id>https://djzzlim.github.io/posts/2025-07-24-homelab</id>
+        <link href="https://djzzlim.github.io/posts/2025-07-24-homelab"/>
+        <updated>2025-07-24T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>::: zh-CN</p>
+<h2>前言 {lang=&quot;zh-CN&quot;}</h2>
+<p>作为一个喜欢折腾的技术爱好者，我一直想要搭建一个属于自己的家庭实验室（Homelab）。既要能在本地网络中使用，又要能通过互联网安全访</p>
+<br/><p>访问 <a href="https://djzzlim.github.io/posts/2025-07-24-homelab" target="_blank">https://djzzlim.github.io/posts/2025-07-24-homelab</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>小林</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-07-24T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to Run macOS on a PC? – Hackintosh Guide Part 3]]></title>
+        <id>https://djzzlim.github.io/posts/2025-03-28-hackintosh-part-3</id>
+        <link href="https://djzzlim.github.io/posts/2025-03-28-hackintosh-part-3"/>
+        <updated>2025-03-28T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>::: zh-CN</p>
+<h2>前言 {lang=&quot;zh-CN&quot;}</h2>
+<p>经过前两篇文章的准备，我们已经了解了黑苹果的基本概念，准备了硬件和OpenCore引导，收集了必要的Kexts和ACPI文件。现在，是</p>
+<br/><p>访问 <a href="https://djzzlim.github.io/posts/2025-03-28-hackintosh-part-3" target="_blank">https://djzzlim.github.io/posts/2025-03-28-hackintosh-part-3</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>小林</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-03-28T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Beyond Textbooks：My Cybersecurity Learning Journey]]></title>
+        <id>https://djzzlim.github.io/posts/2025-03-26-cybersecurity-learning-journey</id>
+        <link href="https://djzzlim.github.io/posts/2025-03-26-cybersecurity-learning-journey"/>
+        <updated>2025-03-26T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>::: zh-CN</p>
+<h2>大学里的迷茫与觉醒 {lang=&quot;zh-CN&quot;}</h2>
+<p>在大学的这段路程中，我发现了一个令人深思的现实：时间在悄然流逝，而学校所教授的知识仅仅是冰山一角。如果单纯依赖学校的课程</p>
+<br/><p>访问 <a href="https://djzzlim.github.io/posts/2025-03-26-cybersecurity-learning-journey" target="_blank">https://djzzlim.github.io/posts/2025-03-26-cybersecurity-learning-journey</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>小林</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-03-26T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to Run macOS on a PC? – Hackintosh Guide Part 2]]></title>
+        <id>https://djzzlim.github.io/posts/2025-03-24-hackintosh-part-2</id>
+        <link href="https://djzzlim.github.io/posts/2025-03-24-hackintosh-part-2"/>
+        <updated>2025-03-24T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>::: zh-CN</p>
+<h2>前言 {lang=&quot;zh-CN&quot;}</h2>
+<p>在经历了一系列尝试与调整后，我终于成功地在我的HP EliteDesk 800 G2 Mini上安装了macOS系统。这篇文章主要记录</p>
+<br/><p>访问 <a href="https://djzzlim.github.io/posts/2025-03-24-hackintosh-part-2" target="_blank">https://djzzlim.github.io/posts/2025-03-24-hackintosh-part-2</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>小林</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-03-24T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to Run macOS on a PC? – Hackintosh Guide Part 1]]></title>
+        <id>https://djzzlim.github.io/posts/2025-03-23-hackintosh-part-1</id>
+        <link href="https://djzzlim.github.io/posts/2025-03-23-hackintosh-part-1"/>
+        <updated>2025-03-23T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>::: zh-CN<br>
+小时候看苹果发布会，总觉得 Mac 电脑又流畅又先进，对比自己笨重的 Windows 设备，心里难免有点羡慕。而且如果想要开发 iOS App，必须要用 Xcode，而 Xcod</p>
+<br/><p>访问 <a href="https://djzzlim.github.io/posts/2025-03-23-hackintosh-part-1" target="_blank">https://djzzlim.github.io/posts/2025-03-23-hackintosh-part-1</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>小林</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-03-23T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Why I Chose Valaxy as My Static Blog Framework]]></title>
+        <id>https://djzzlim.github.io/posts/2025-03-23-why-i-chose-valaxy</id>
+        <link href="https://djzzlim.github.io/posts/2025-03-23-why-i-chose-valaxy"/>
+        <updated>2025-03-23T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>::: zh-CN</p>
+<h2>作品集的挑战 {lang=&quot;zh-CN&quot;}</h2>
+<p>当我决定建立我的专业作品集时，我最初面临一个常见的困境。我想要一个看起来精致专业的网站，但又不想花钱购买域名和托管服务。作为一</p>
+<br/><p>访问 <a href="https://djzzlim.github.io/posts/2025-03-23-why-i-chose-valaxy" target="_blank">https://djzzlim.github.io/posts/2025-03-23-why-i-chose-valaxy</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>小林</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2025-03-23T00:00:00.000Z</published>
+    </entry>
+</feed>
